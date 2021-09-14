@@ -1,0 +1,147 @@
+:root {
+    --transition-speed: 600ms;
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    --navbar-color: rgb(173, 137, 221);
+    --background-color: rgb(206, 193, 193);
+    --transpeed: 600ms;
+}
+/* links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    font-style: normal;
+    color: #366144;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+    align-items: center;
+}
+
+/* navbar icon */
+#nav-icon {
+    font-size: 2rem;
+    color: #366144;
+    transform: rotate(0deg);
+    transition: transform var(--transpeed);
+}
+#navbar:hover #nav-icon{
+    transform: rotate(180deg);
+}
+/* link-text */
+.link-text {
+    display: none;
+}
+/* navlinks */
+.navlink {
+    filter: grayscale(100%) opacity (0.7);
+    transition: var(--transpeed);
+}
+.navlink:hover {
+    filter: grayscale(0%) opacity(1);
+    color: #698171;
+}
+
+/* hover on navbar */
+#navbar:hover {
+    height: 6rem;    
+}
+#navbar:hover .link-text{
+    display:block;
+}
+
+body::-webkit-scrollbar {
+    width: 0.20rem;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-track{
+    background-color: black;
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: plum;
+}
+/* large screens */
+@media only screen and (min-width: 600px) {
+    /* Body goes here */
+    body{
+        margin:0;
+        padding:0;
+        background: rgb(53,26,21);
+        background: linear-gradient(40deg, rgba(53,26,21,1) 9%, rgba(167,25,25,1) 19%, rgba(228,94,56,1) 38%, rgba(255,86,5,1) 60%);
+    }
+    /* welcome section */
+    #welcome-section{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        align-content: center;
+        margin-top: 5rem;
+        height: 100vh;
+        width: 99%;
+        text-align: center;
+    }
+    /* navbar is here */
+    #navbar{
+        position: fixed;
+        border-style: solid;
+        border-top: black;
+        border-width: 1.5px;
+        border-radius: 5px;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 3rem;
+        background: #181D27;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* gap: 0.5rem; */
+        margin: auto;
+        box-shadow: rgba(50, 50, 93, 0.88) 0px 50px 100px -20px, rgba(0, 0, 0, 0.75) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        transition: height 500ms ease;
+    }
+    /* the menu icon, we put it right at the start of navbar */
+    #navbar:first-child {
+        margin-right: auto;
+    }
+    
+    /* project tiles go here */
+    #projects {
+        width: auto;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .project-tile {
+        border-style: inset;
+        border-radius: 5px;
+        border-width:1.5px;
+        border-color: #ba160c;
+        background-color: #D0DB97;
+        box-shadow: rgba(50, 50, 93, 0.88) 0px 50px 100px -20px, rgba(61, 34, 34, 0.75) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+    
+    h1{
+        font-size: 50px;
+        color: #D0DB97;
+    }
+    p{
+        font-size: 18px;
+        color: #D0DB97;
+    }
+
+    #contact-links{
+        display: flex;
+        width: 100%;
+        height: 5rem;
+        align-items:center;
+        justify-content: space-evenly;
+        background: #181D27;
+        margin-top: 1rem;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    }
+}
+
